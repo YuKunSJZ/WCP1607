@@ -4,7 +4,7 @@
 
 <html>
   <head> 
-    <title>房屋信息登记</title>  
+    <title>石家庄</title>  
     <link href="../css/add_modify.css" rel="stylesheet" type="text/css"  /> 
     <script src="../js/util.js" language="JavaScript"></script> 
   </head>

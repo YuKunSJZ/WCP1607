@@ -6,30 +6,30 @@
 <head> 
 <title>房屋出租管理系统</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" /> 
-<script src="js/treemenu.js" language="JavaScript"></script> 
-<script src="opennew/Dialog.js" language="javascript"></script>
+<script src="js/treemenu.js" language="JavaScript" type="text/javascript"></script> 
+<script src="opennew/Dialog.js" language="javascript" type="text/javascript"></script>
  </head>
 
 <body> 
 
 <div id="container">
-	<div id="banner"><img src="images/TopTitle.gif" /></div>
+	<div id="banner"><img src="images/TopTitle.gif" alt="TopTitle"/></div>
 	<div id="globallink">
 		<ul>
-			<li><a href="#" onclick="javascript:ShowTreeNode(1);">房屋管理</a></li>
-			<li><a href="#" onclick="javascript:ShowTreeNode(2);">入住管理</a></li>
-			<li><a href="#" onclick="javascript:ShowTreeNode(3);">房租管理</a></li>
-			<li><a href="#" onclick="javascript:ShowTreeNode(4);">电费管理</a></li>
-			<li><a href="#" onclick="javascript:ShowTreeNode(5);">水费管理</a></li>
-			<li><a href="#" onclick="javascript:ShowTreeNode(6);">费用统计</a></li>
-			<li><a href="#" onclick="javascript:ShowTreeNode(7);">系统管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(1);">员工管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(2);">工作管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(3);">部门管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(4);">资产管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(5);">权限管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(6);">系统管理</a></li>
+			<li><a href="#" onclick="javascript:ShowTreeNode(7);">联系我们</a></li>
 		</ul>
 		<br />
 	</div>
 	
 	<div id="left">
-		<div id="MenuTitle"> <img src="images/menu.jpg" /></div>
-		<div id="NavMenu"> <script language=JavaScript> WriteTreeInfo();</script></div>
+		<div id="MenuTitle"> <img src="images/menu.jpg" alt="menu" /></div>
+		<div id="NavMenu"> <script language="JavaScript" type="text/javascript"> WriteTreeInfo();</script></div>
 	</div>	
  
 	<div id="main">
@@ -38,7 +38,7 @@
 	</div>
 	
 	<div id="footer">
-		<p>xxx设计 QQ:xxxxxxxxxx或xxx 手机:xxx &copy;版权所有 <a href="http://www.51aspx.com" target="_blank">xxx设计网</a></p>
+		<p>ICP:010033234 QQ:741346664 手机:13739795066 &copy;版权所有 <a href="#" target="_blank">石家庄筑企软件</a></p>
 	</div>
 </div>
 </body>

@@ -112,54 +112,56 @@ function WriteTreeInfo() {
     closedImg.src =  "images/closed.gif"; 
 
     var branches = new Array();
-    branches[1] = new branch('branch1', '房屋信息管理');
-    var branch1_leaf1 = new leaf('房屋信息登记',  'hourse/hourse_add.aspx');
-    var branch1_leaf2 = new leaf('房屋信息维护',  'hourse/hourse_manage.aspx');
+    branches[1] = new branch('branch1', '员工管理');
+    var branch1_leaf1 = new leaf('增加员工',  'hourse/hourse_add.aspx');
+    var branch1_leaf2 = new leaf('删除员工',  'hourse/hourse_manage.aspx');
     branches[1].add(branch1_leaf1);
     branches[1].add(branch1_leaf2);
 
-    branches[2] = new branch('branch2', '入住管理');
-    var branch2_leaf1 = new leaf('户主入住登记', 'hourse/hourse_add.aspx');
-    var branch2_leaf2 = new leaf('户主入住查询', 'hourse/hourse_manage.aspx');
-    var branch2_leaf3 = new leaf('户主撤出登记', 'hourse/hourse_manage.aspx');
+    branches[2] = new branch('branch2', '工作管理');
+    var branch2_leaf1 = new leaf('待做工作', 'hourse/hourse_add.aspx');
+    var branch2_leaf2 = new leaf('已做工作', 'hourse/hourse_manage.aspx');
+    var branch2_leaf3 = new leaf('工作跟踪', 'hourse/hourse_manage.aspx');
     branches[2].add(branch2_leaf1);
     branches[2].add(branch2_leaf2);
     branches[2].add(branch2_leaf3);
 
-    branches[3] = new branch('branch3', '房租管理');
-    var branch3_leaf1 = new leaf('收取住户房租', 'hourse/hourse_add.aspx');
-    var branch3_leaf2 = new leaf('房租记录查询', 'hourse/hourse_manage.aspx');
+    branches[3] = new branch('branch3', '部门管理');
+    var branch3_leaf1 = new leaf('部门列表', 'hourse/hourse_add.aspx');
+    var branch3_leaf2 = new leaf('新增部门', 'hourse/hourse_manage.aspx');
+    var branch3_leaf3 = new leaf('删除部门', 'hourse/hourse_manage.aspx');
     branches[3].add(branch3_leaf1);
     branches[3].add(branch3_leaf2);
+    branches[3].add(branch3_leaf3);
 
-    branches[4] = new branch('branch4', '电费管理');
-    var branch4_leaf1 = new leaf('收取电费登记', 'hourse/hourse_add.aspx');
-    var branch4_leaf2 = new leaf('电费记录查询', 'hourse/hourse_manage.aspx');
+    branches[4] = new branch('branch4', '资产管理');
+    var branch4_leaf1 = new leaf('当前资产', 'hourse/hourse_add.aspx');
+    var branch4_leaf2 = new leaf('新增资产', 'hourse/hourse_manage.aspx');
     branches[4].add(branch4_leaf1)
     branches[4].add(branch4_leaf2);
 
-    branches[5] = new branch('branch5', '水费管理');
-    var branch5_leaf1 = new leaf('收取住户水费', 'hourse/hourse_add.aspx');
-    var branch5_leaf2 = new leaf('水费记录查询', 'hourse/hourse_manage.aspx');
+    branches[5] = new branch('branch5', '权限管理');
+    var branch5_leaf1 = new leaf('权限列表', 'hourse/hourse_add.aspx');
+    var branch5_leaf2 = new leaf('修改权限', 'hourse/hourse_manage.aspx');
     branches[5].add(branch5_leaf1)
     branches[5].add(branch5_leaf2);
 
-    branches[6] = new branch('branch6', '费用统计');
-    var branch6_leaf1 = new leaf('费用收取查询', 'hourse/hourse_add.aspx');
-    var branch6_leaf2 = new leaf('房租欠费统计', 'hourse/hourse_manage.aspx');
+    branches[6] = new branch('branch6', '系统管理');
+    var branch6_leaf1 = new leaf('界面风格', 'hourse/hourse_add.aspx');
+    var branch6_leaf2 = new leaf('左边栏', 'hourse/hourse_manage.aspx');
     branches[6].add(branch6_leaf1)
     branches[6].add(branch6_leaf2);
 
 
-    branches[7] = new branch('branch7', '系统管理');
-    var branch7_leaf1 = new leaf('修改密码', 'hourse/hourse_manage.aspx');
-    var branch7_leaf2 = new leaf('水电单价设置', 'hourse/hourse_manage.aspx');
-    var branch7_leaf3 = new leaf('系统说明',  'desk.aspx');
-    var branch7_leaf4 = new leaf('关于系统',  'about.html');
+    branches[7] = new branch('branch7', '联系我们');
+    var branch7_leaf1 = new leaf('联系我们', 'hourse/hourse_manage.aspx');
+    //var branch7_leaf2 = new leaf('水电单价设置', 'hourse/hourse_manage.aspx');
+    //var branch7_leaf3 = new leaf('系统说明',  'desk.aspx');
+    //var branch7_leaf4 = new leaf('关于系统',  'about.html');
     branches[7].add(branch7_leaf1)
-    branches[7].add(branch7_leaf2);
-    branches[7].add(branch7_leaf3);
-    branches[7].add(branch7_leaf4);
+    //branches[7].add(branch7_leaf2);
+    //branches[7].add(branch7_leaf3);
+    //branches[7].add(branch7_leaf4);
 
     myTree.add(branches[1]);
     myTree.add(branches[2]);

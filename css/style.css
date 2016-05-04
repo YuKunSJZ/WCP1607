@@ -55,7 +55,8 @@ body{
 }
 
 #left{  
-	width:150px;
+	/*width:150px;*/
+    width:15%;
 	height:450px;
 	float:left;
 	/*background:#FFFFFF url(leftbottom.jpg) no-repeat bottom;*/ /*об╤кт╡╫г */ 
@@ -85,7 +86,8 @@ body{
 
 #main{
 	float:left;
-	width:auto;
+	/*width:auto;*/
+    width:83%;
 	height:450px;
 	margin:1px 0px 0px 2px
 }
