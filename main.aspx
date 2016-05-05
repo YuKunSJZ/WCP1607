@@ -4,7 +4,7 @@
 
 <html>
 <head> 
-<title>房屋出租管理系统</title>
+<title>石家庄筑企软件</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" /> 
 <script src="js/treemenu.js" language="JavaScript" type="text/javascript"></script> 
 <script src="opennew/Dialog.js" language="javascript" type="text/javascript"></script>

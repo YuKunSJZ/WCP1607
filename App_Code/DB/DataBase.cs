@@ -33,7 +33,7 @@ namespace HourseRentSystem.DB
             MyDBConnectionString.Password = "yukun123";
             MyDBConnectionString.DefaultCommandTimeout = 30;
             MyDBConnectionString.ConnectionTimeout = 10;
-            MyDBConnectionString.Database = "WrokFlow";
+            MyDBConnectionString.Database = "OABase";
 
             ConnectionString = MyDBConnectionString.GetConnectionString(true);
 
