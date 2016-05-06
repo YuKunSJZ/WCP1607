@@ -13,7 +13,9 @@
 <body> 
 
 <div id="container">
+    <!--
 	<div id="banner"><img src="images/TopTitle.gif" alt="TopTitle"/></div>
+    -->
 	<div id="globallink">
 		<ul>
 			<li><a href="#" onclick="javascript:ShowTreeNode(1);">员工管理</a></li>

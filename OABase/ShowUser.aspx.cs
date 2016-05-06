@@ -20,7 +20,7 @@ public partial class OABase_AddUser : System.Web.UI.Page
         }
         else
         {
-            data
+            
             
         }
 

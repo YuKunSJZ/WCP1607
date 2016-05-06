@@ -9,8 +9,10 @@
 </head>
 <body>
     <div id="container">
+        <!--
         <div id="banner">
             <img src="images/TopTitle.gif" alt="首页" /></div>
+        -->
         <div id="LoginPanel">
             <div id="Title">
                 <img src="images/login.jpg" width="100%" alt="首页" /></div>
