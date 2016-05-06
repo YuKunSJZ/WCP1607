@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>增加用户</title>
     <link href="../css/add_modify.css" rel="stylesheet" type="text/css" />
-    <script src="../js/util.js" language="javascript"></script>
+    <script src="../js/util.js" type="text/javascript"></script>
 </head>
 <body>
     <div id="container">
