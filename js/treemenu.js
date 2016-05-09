@@ -114,7 +114,7 @@ function WriteTreeInfo() {
     var branches = new Array();
     branches[1] = new branch('branch1', '员工管理');
     var branch1_leaf1 = new leaf('增加员工',  'OABase/AddUser.aspx');
-    var branch1_leaf2 = new leaf('删除员工',  'hourse/hourse_manage.aspx');
+    var branch1_leaf2 = new leaf('员工列表',  'OABase/ListUsers.aspx');
     branches[1].add(branch1_leaf1);
     branches[1].add(branch1_leaf2);
 
