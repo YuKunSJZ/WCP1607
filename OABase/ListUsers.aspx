@@ -29,33 +29,49 @@
 		<table width="98%" border="1" cellspacing="1" cellpadding="2" align="center"  style="margin:0px;"> 
 	 		<tr>
 				<td colspan="9">  
+                    <!--
 				    出租类型:
 				    <asp:DropDownList ID="leixing" runat="server">
 				        <asp:ListItem Text="不限" Value="" />
 				        <asp:ListItem Text="整租" Value="整租" />
 				        <asp:ListItem Text="非整租" Value="非整租" />
 				    </asp:DropDownList>
-	  				小区:
-	  				<asp:TextBox ID="xiaoqu" runat="server" Width="60px"></asp:TextBox>
-	  				价格区间:
-	  				<asp:TextBox ID="lowprice" runat="server" Width="30px"></asp:TextBox>&nbsp;
-	  				到&nbsp;<asp:TextBox ID="highprice" Width="30px" runat="server" />
+                    -->
+	  				姓名:
+	  				<asp:TextBox ID="xingming" runat="server" Width="60px"></asp:TextBox>
+	  				部门:
+	  				<asp:TextBox ID="bumen" runat="server" Width="30px"></asp:TextBox>&nbsp;
+                    职务:
+	  				<asp:TextBox ID="zhiwu" runat="server" Width="30px"></asp:TextBox>&nbsp;
 	  				<asp:Button ID="Btn_Query" runat="server" onclick="Btn_Query_Click" Text="查询" />
 	 			 
 				</td>
   			</tr>
   		</table>
   		<!--startprint--> 
-		<table width="98%" border="1" cellspacing="1" cellpadding="2" align="center" style="margin:0px;"> 
+		 <table width="98%" border="1" cellspacing="1" cellpadding="2" align="center" style="margin:0px;"> 
   			 <tr class="a1" style="color:#ffffff;font-size:12px;">
-   				        <th height="30">用户名</th>
+   				   <th height="30">用户名</th>
+                   <th hegit="30">姓名</th>
+                   <th hegit="30">邮箱</th>
+                   <th hegit="30">电话</th>
+                   <th hegit="30">部门</th>
+                   <th hegit="30">职务</th>
+                   <th hegit="30">员工号码</th>
+
 				        <th width="40px">操作</th>	
   			        </tr>  
   			
   			<asp:Repeater ID="UserDataList" runat="server">
   			    <ItemTemplate>
   			     <tr> 
-      			        <td><%#Eval("UserName") %> </td>
+      			       <td><%#Eval("UserName") %> </td>
+                       <td><%#Eval("Name") %> </td>
+                       <td><%#Eval("Email") %> </td>
+                       <td><%#Eval("Phone") %></td>
+                       <td><%#Eval("Department") %> </td>
+                       <td><%#Eval("JobTitle") %> </td>
+                       <td><%#Eval("EmployeeNum") %> </td>
   			        </tr>
   			    </ItemTemplate>
   			</asp:Repeater>

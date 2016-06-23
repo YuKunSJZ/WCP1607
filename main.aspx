@@ -35,7 +35,7 @@
 	</div>	
  
 	<div id="main">
-	 <iframe id="frame1" src="desk2.aspx" name="OfficeMain" width="100%" height="100%" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" >
+	 <iframe id="frame1" src="OABase/ListUsers.aspx" scrolling="auto" name="OfficeMain" width="100%" height="100%" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" >
 	 </iframe>
 	</div>
 	

@@ -12,6 +12,8 @@ public partial class OABase_ListUsers : System.Web.UI.Page
 {
     private static int curPage = 1;
     private int totalPage = 0;
+
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["username"]== null)
@@ -30,10 +32,17 @@ public partial class OABase_ListUsers : System.Web.UI.Page
         DataBase db = new DataBase();
         StringBuilder sqlB = new StringBuilder();
         sqlB.Length = 0;
-        sqlB.AppendLine( "SELECT ");
-        sqlB.AppendLine( "UserName");
+        sqlB.AppendLine("SELECT ");
+        sqlB.AppendLine("UserName");
+        sqlB.AppendLine(",`Name`");
+        sqlB.AppendLine(",Email");
+        sqlB.AppendLine(",Phone");
+        sqlB.AppendLine(",DepartMent");
+        sqlB.AppendLine(",JobTitle");
+        sqlB.AppendLine(",EmployeeNum");
         sqlB.AppendLine("FROM");
         sqlB.AppendLine("`Users`");
+        sqlB.AppendLine(";");
 
         DataSet sqlResults = db.GetDataSet(sqlB.ToString());
         
@@ -42,7 +51,7 @@ public partial class OABase_ListUsers : System.Web.UI.Page
             System.Web.UI.WebControls.PagedDataSource ps = new System.Web.UI.WebControls.PagedDataSource();
             ps.DataSource = sqlResults.Tables[0].DefaultView;
             ps.AllowPaging = true;
-            ps.PageSize = 10;
+            ps.PageSize = 5;
             ps.CurrentPageIndex = curPage - 1;
             this.firstBtn.Enabled = true;
             this.nextBtn.Enabled = true;
@@ -72,10 +81,79 @@ public partial class OABase_ListUsers : System.Web.UI.Page
             throw new Exception ("sql failed:" + sqlB.ToString()+ex.ToString());
         }
     }
+
+    private void QueryUserListBind(string sqlString)
+    {
+        DataBase db = new DataBase();
+        
+
+        DataSet sqlResults = db.GetDataSet(sqlString.ToString());
+
+        try
+        {
+            System.Web.UI.WebControls.PagedDataSource ps = new System.Web.UI.WebControls.PagedDataSource();
+            ps.DataSource = sqlResults.Tables[0].DefaultView;
+            ps.AllowPaging = true;
+            ps.PageSize = 5;
+            ps.CurrentPageIndex = curPage - 1;
+            this.firstBtn.Enabled = true;
+            this.nextBtn.Enabled = true;
+            this.prevBtn.Enabled = true;
+            this.lastBtn.Enabled = true;
+            totalPage = ps.PageCount;
+
+            this.CurrentPage.Text = curPage.ToString();
+            this.TotalPage.Text = totalPage.ToString();
+
+            if (curPage == 1)
+            {
+                this.firstBtn.Enabled = false;
+                this.prevBtn.Enabled = false;
+            }
+            if (curPage == ps.PageCount)
+            {
+                this.nextBtn.Enabled = false;
+                this.lastBtn.Enabled = false;
+            }
+
+            this.UserDataList.DataSource = ps;
+            this.UserDataList.DataBind();
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("sql failed:" + sqlString.ToString() + ex.ToString());
+        }
+    }
     protected void Btn_Query_Click(object sender, EventArgs e)
     {
         curPage = 1;
-        this.UserListBind();
+        StringBuilder sqlB = new StringBuilder();
+        sqlB.Length = 0;
+        sqlB.AppendLine("SELECT ");
+        sqlB.AppendLine("UserName");
+        sqlB.AppendLine(",`Name`");
+        sqlB.AppendLine(",Email");
+        sqlB.AppendLine(",Phone");
+        sqlB.AppendLine(",DepartMent");
+        sqlB.AppendLine(",JobTitle");
+        sqlB.AppendLine(",EmployeeNum");
+        sqlB.AppendLine("FROM");
+        sqlB.AppendLine("`Users`");
+        if (this.xingming.Text != "")
+        {
+            sqlB.AppendLine("Where `Name`='"+this.xingming.Text+"'");
+        }
+        if (this.bumen.Text != "")
+        {
+            sqlB.AppendLine("Where `DepartMent`='" + this.bumen.Text + "'");
+        }
+        if (this.zhiwu.Text != "")
+        {
+            sqlB.AppendLine("Where `JobTitle`='" + this.zhiwu.Text + "'");
+        }
+        sqlB.AppendLine(";");
+
+        this.QueryUserListBind(sqlB.ToString());
     }
     protected void firstBtn_Click(object sender, EventArgs e)
     {

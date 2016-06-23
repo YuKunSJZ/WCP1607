@@ -30,6 +30,7 @@ public partial class OABase_AddUser : System.Web.UI.Page
 
         UserDAO BC_User = new UserDAO();
         BC_User.InsertIntoUser(UserName, Password, Name, Department, JobTitle, PhoneNumber);
+        Response.Redirect("ListUsers.aspx");
         
     }
 }
